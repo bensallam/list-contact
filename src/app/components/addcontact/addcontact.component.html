@@ -1,0 +1,27 @@
+<div class="row" *ngIf="statusContcat">
+  <div class="col s12">
+    <div class="row">
+      <form (ngSubmit)="createContact()">
+        <div class="input-field col s6">
+          <i class="fa fa-user prefix"></i>
+          <input type="text" id="name" name="name" [(ngModel)]="contact.name">
+          <label for="name">Name</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="fa fa-phone prefix"></i>
+          <input type="text" id="phone" name="phone" [(ngModel)]="contact.phone">
+          <label for="phone">Number phone</label>
+        </div>
+      </form>
+  </div>
+    <button class="btn-large light-green " type="submit" (click)="createContact()">Add Contact</button>
+  </div>
+</div>
+
+<div class="fixed-action-btn">
+  <a class="btn-floating btn-large waves-effect waves-light light" (click)="statusContcat = !statusContcat">
+    <i class="fa fa-plus"></i>
+  </a>
+</div>
+
+
